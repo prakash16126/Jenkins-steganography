@@ -51,7 +51,7 @@
     </dependencies>
 
     <build>
-        <finalName>jenkins-steganography-1.0.0</finalName>
+        <finalName>steganography</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

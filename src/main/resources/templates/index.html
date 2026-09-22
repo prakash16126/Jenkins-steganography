@@ -555,8 +555,10 @@
         btn.disabled = true;
         btn.innerText = '⏳ Encoding Bitstream...';
 
+        const contextPath = window.location.pathname.endsWith('/') ? window.location.pathname : window.location.pathname + '/';
+
         try {
-            const response = await fetch('/api/encode', {
+            const response = await fetch(contextPath + 'api/encode', {
                 method: 'POST',
                 body: formData
             });
@@ -606,8 +608,10 @@
         btn.disabled = true;
         btn.innerText = '⏳ Extracting LSB Data...';
 
+        const contextPath = window.location.pathname.endsWith('/') ? window.location.pathname : window.location.pathname + '/';
+
         try {
-            const response = await fetch('/api/decode', {
+            const response = await fetch(contextPath + 'api/decode', {
                 method: 'POST',
                 body: formData
             });
